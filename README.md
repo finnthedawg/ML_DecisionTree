@@ -41,3 +41,22 @@ Avg std20 : 7.571877794400365
 ```
 
 The best performing model was the lowest n_min percentage of 5% (Since the tree can be more granular) and it did not appear to overfit too much to the training fold and accurately predicted the test.
+### Confusion matrix
+
+Based on the best `n_min value` (5), I created a class confusion matrix using ten-fold cross-validation utilizing concatenation of the matricies on the test portions.
+
+```
+[[46  0  4]
+ [ 0 50  0]
+ [ 1  6 43]]
+ ```
+
+ This confusion matrix can be understood as:
+
+ For Iris-virginica my model predicted 46 as Iris-virginica, 0 as Iris-setosa and 4 as Iris-versicolor.
+
+ For Iris-setosa my model predicted 0 as Iris-virginica, 50 as Iris-setosa and 0 as Iris-versicolor.
+
+ For Iris-versicolor my model predicted 1 as Iris-virginica, 6 as Iris-setosa and 43 as Iris-versicolor
+
+ 
