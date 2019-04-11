@@ -24,3 +24,20 @@ To predict a single value:
 tree.predict([6.4, 2.8, 5.7, 2.2])
 >>> 'Iris-virginica'
 ```
+### Accuracy evaluation of min node size using K-fold
+
+In order to determine the best leaf size to use, we train the data on 10 k-folds at various different n_min values. The results were as following:
+
+```
+#Std is of the 10 errors in each fold.
+Avg accuracy over 10 folds for n_min 5 : 93.33333333333333
+Avg std5 : 7.888106377466154
+Avg accuracy over 10 folds for n_min 10 : 90.66666666666667
+Avg std10 : 8.537498983243799
+Avg accuracy over 10 folds for n_min 15 : 92.66666666666666
+Avg std15 : 7.571877794400365
+Avg accuracy over 10 folds for n_min 20 : 92.66666666666666
+Avg std20 : 7.571877794400365
+```
+
+The best performing model was the lowest n_min percentage of 5% (Since the tree can be more granular) and it did not appear to overfit too much to the training fold and accurately predicted the test.
