@@ -144,3 +144,5 @@ Avg std for this MSE for n_min25 : 31.308222840450757
 ```
 
 It appears that MSE increases slightly as n_min increases. However, past a certain n_min, the MSE dramatically increases and the algorithm beings to perform poorly.
+
+This is because when the n_min is low, the leaf sizes are small and numerous and the model overfits the data leading to a lower accuracy over the kfolds. When the n_min is too high, the leaf sizes are too big and the model underfits the data and also performs poorly.
