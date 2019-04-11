@@ -11,6 +11,13 @@
 
 ---
 
+Build instructions:
+
+```
+git clone
+jupyter notebook DecisionTree.ipynb
+```
+
 ## Classification task: Iris flower dataset (iris.csv)
 
 The Iris flower dataset is a dataset with 4 input features that classifies the flower into either `Iris-virginica`, ` Iris-setosa` or `Iris-versicolor`. This dataset was loaded using my `loadData()` function and the first four features were converted to floats.
